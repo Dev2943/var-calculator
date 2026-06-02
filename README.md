@@ -17,6 +17,25 @@ Built as the fourth project in a quantitative finance portfolio. The end-to-end 
 
 ---
 
+## VaR Comparison
+   
+![VaR comparison](var_comparison.png)
+   
+ Historical Simulation produces 22% higher VaR than the Gaussian-based methods — direct evidence of fat-tailed returns. The Gaussian ES/VaR ratio of 1.15 matches the theoretical closed-form exactly.
+   
+## Exception Clustering — The Christoffersen Story
+   
+![Exception clusters](exception_clusters.png)
+   
+Cumulative portfolio P&L (top) with VaR exceptions overlaid (bottom). Exception clustering during the 2008 GFC and 2020 COVID windows is visually unmistakable — and is what drives Christoffersen's independence test to reject all three methods at p < 0.001 despite Historical Simulation having a reasonable total exception count.
+   
+## Stress Test Loss Waterfall
+   
+![Stress waterfall](stress_waterfall.png)
+   
+Peak losses by scenario, with the daily 99% VaR (dashed) and a typical 5× VaR capital allocation (dotted) overlaid. Stress losses run 3-9× single-day VaR; the worst scenarios exceed the 5× capital line. This is the mathematical foundation for FRTB's stressed-ES requirement.
+
+
 ## Project structure
 
 ```
